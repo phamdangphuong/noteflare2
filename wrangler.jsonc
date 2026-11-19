@@ -30,7 +30,7 @@
   // Optional: encrypted attachments. Uncomment to let notes carry images and files; the
   // first deploy creates the bucket. R2 must be enabled on your Cloudflare account
   // (free for the first 10 GB, but it asks for a payment method), which is why it is off by default.
-  // "r2_buckets": [{ "binding": "ATTACHMENTS", "bucket_name": "noteflare-attachments" }],
+  "r2_buckets": [{ "binding": "ATTACHMENTS", "bucket_name": "noteflare-attachments" }],
 
   // Live sync: tells your other open devices to pull right after a change (only note ids and versions).
   "durable_objects": { "bindings": [{ "name": "LIVE", "class_name": "LiveSync" }] },
@@ -50,7 +50,7 @@
     "ACCESS_TEAM_DOMAIN": "todo",
     "ACCESS_AUD": "todo",
     // Optional second lock on top of the Access policy: emails or "@domain", comma-separated.
-    "ALLOWED_EMAILS": "",
+    "ALLOWED_EMAILS": "dpf_cc@yahoo.com",
     // Where to look for new releases ("owner/repo"). Use your fork, or "off" to disable.
     "UPDATE_CHECK_REPO": "homielab/noteflare"
   },
