@@ -50,7 +50,7 @@
     "ACCESS_TEAM_DOMAIN": "todo",
     "ACCESS_AUD": "todo",
     // Optional second lock on top of the Access policy: emails or "@domain", comma-separated.
-    "ALLOWED_EMAILS": {"dpf_cc@yahoo.com","dangphuong0511@gmail.com"},
+    "ALLOWED_EMAILS": [{"dpf_cc@yahoo.com","dangphuong0511@gmail.com"}],
     // Where to look for new releases ("owner/repo"). Use your fork, or "off" to disable.
     "UPDATE_CHECK_REPO": "homielab/noteflare"
   },
