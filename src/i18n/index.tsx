@@ -1,23 +1,15 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 import { en, type MessageKey } from './en'
 import { vi } from './vi'
-import { es } from './es'
-import { fr } from './fr'
-import { de } from './de'
-import { pt } from './pt'
 
 export type { MessageKey }
-export type Lang = 'en' | 'vi' | 'es' | 'fr' | 'de' | 'pt'
+export type Lang = 'en' | 'vi'
 export const LANGS: { code: Lang; name: string }[] = [
   { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'fr', name: 'Français' },
-  { code: 'de', name: 'Deutsch' },
-  { code: 'pt', name: 'Português (Brasil)' },
   { code: 'vi', name: 'Tiếng Việt' },
 ]
 
-const dicts: Record<Lang, Record<MessageKey, string>> = { en, vi, es, fr, de, pt }
+const dicts: Record<Lang, Record<MessageKey, string>> = { en, vi }
 
 /**
  * Pick the first browser language we speak, by prefix ('es-419' → 'es',
@@ -26,10 +18,6 @@ const dicts: Record<Lang, Record<MessageKey, string>> = { en, vi, es, fr, de, pt
 export function detectLang(prefs: readonly string[]): Lang {
   for (const pref of prefs) {
     const p = pref.toLowerCase()
-    if (p.startsWith('es')) return 'es'
-    if (p.startsWith('fr')) return 'fr'
-    if (p.startsWith('de')) return 'de'
-    if (p.startsWith('pt')) return 'pt'
     if (p.startsWith('vi')) return 'vi'
     if (p.startsWith('en')) return 'en'
   }
@@ -66,10 +54,6 @@ export function t(key: MessageKey, vars?: Record<string, string | number>): stri
 const DATE_LOCALES: Record<Lang, string> = {
   en: 'en-US',
   vi: 'vi-VN',
-  es: 'es-ES',
-  fr: 'fr-FR',
-  de: 'de-DE',
-  pt: 'pt-BR',
 }
 
 export const dateLocale = () => DATE_LOCALES[current]
