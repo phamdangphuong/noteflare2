@@ -19,7 +19,7 @@
   --surface: #ffffff;
   --muted: #edebe8;
   --muted-foreground: #6b6560;
-  --border: #e2dfdb;
+  --border: ##0550bd;
   --input: #d3cfca;
   --ring: #79c0ff;
   --primary: #79c0ff;
@@ -54,9 +54,9 @@
   --surface: #212124;
   --muted: #2a2a2d;
   --muted-foreground: #9a948e;
-  --border: #313135;
+  --border: #8b949e;
   --input: #3e3e43;
-  --ring: #fbad41;
+  --ring: #79c0ff;
   --primary: #79c0ff;
   --primary-foreground: #1c1b1a;
   --secondary: #2a2a2d;
